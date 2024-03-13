@@ -12,10 +12,17 @@ export default function Home() {
         <h2> Intento de responsive design </h2>
       </div>
       <div className={styles.grid}>
-        <div className={styles.card}>
+        <a
+          href="/cazuela"
+          className={styles.card}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <h3>Cazuela</h3>
           <p>Por favor no hagan cazuela en pleno verano</p>
-        </div>
+        </a>
+
+
         <div className={styles.card}>
           <h3>Sopaipilla</h3>
           <p>Ricas sopaipillas con ketchup</p>
