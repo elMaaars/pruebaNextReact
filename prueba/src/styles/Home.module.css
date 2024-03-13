@@ -1,3 +1,11 @@
+/*
+Colores base: 
+#f5f0f0 (blanco)
+#9acffe (celeste)
+#000000 (negro)
+#04358a (azul)
+*/
+
 .main {
     align-items: center;
     display: grid;
@@ -28,6 +36,7 @@
 }
 .card {
     background-color: #659bc1;
+    color: #000000;
     border-radius: 5px;
     padding: 1%;
     text-align: center;
@@ -49,6 +58,6 @@
 
 @media (max-width: 700px) {
     .grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 }
