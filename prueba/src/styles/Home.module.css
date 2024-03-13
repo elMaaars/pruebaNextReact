@@ -5,6 +5,16 @@ Colores base:
 #000000 (negro)
 #04358a (azul)
 */
+.recipeeCard {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+}
+.recipeeCard div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    
+}
 
 .main {
     align-items: center;
