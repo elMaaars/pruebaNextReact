@@ -20,9 +20,29 @@ Colores base:
     align-items: center;
     display: grid;
 }
+.navigationbar{
+    background-color: #76ABAE;
+    display: flex;
+}
+.navigationbar ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navigationbar li a{
+    display: block;
+    text-align: center;
+    padding: 3px 15px;
+    text-transform: uppercase;
+}
+.navigationbar li a:hover{
+    background-color: #31363F;
+    color:#EEEEEE;
+}
 .title {
-    background-color: #435068;
-    color: #e9e7e4;
+    background-color: #31363F;
+    color: #EEEEEE;
     padding: 1%;
     text-align: center;
     margin-bottom: 30px;
@@ -45,10 +65,10 @@ Colores base:
     grid-template-columns: repeat(4, 1fr); /* 4 espacios, cada uno del tamaño de una fracción del total */
 }
 .card {
-    background-color: #659bc1;
-    color: #000000;
+    background-color: #76ABAE;
+    color: #222831;
     border-radius: 5px;
-    padding: 1%;
+    padding: 2%;
     text-align: center;
     margin: 10px;
 }
