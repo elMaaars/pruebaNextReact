@@ -66,9 +66,6 @@
     .grid {
       grid-template-columns: repeat(2, 50%);
     }
-    .navigationbar{
-
-    }
 }
 
 @media (max-width: 700px) {

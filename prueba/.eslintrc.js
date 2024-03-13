@@ -35,7 +35,6 @@ module.exports = {
     "no-else-return": "warn",
     "no-eval": "error",
     "no-implied-eval": "error",
-    "no-magic-numbers": "warn",
     "no-multi-assign": "error",
     "no-var": "error",
     "prefer-arrow-callback": "warn",
