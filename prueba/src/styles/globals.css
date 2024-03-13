@@ -1,6 +1,11 @@
 /* Honestamente no sé de dónde salió esta notación */
 :root{
-    background-color: #e9e7e4;
-    color: #281930;
+    background-color: #EEEEEE;
+    color: #222831;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
