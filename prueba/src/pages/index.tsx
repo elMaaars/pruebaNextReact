@@ -9,16 +9,14 @@ function DesktopMenu() {
   return (
     <>
       <div className={styles.navigationbar}>
-        <ul>
-          <li><a href="">Link1</a></li>
-          <li><a href="">Link2</a></li>
-          <li><a href="">Link3</a></li>
-          <li><a href="">Link4</a></li>
-          <li><a href="">Link5</a></li>
-          <li><a href="">Link6</a></li>
-          <li><a href="">Link7</a></li>
-          <li><a href="">Link8</a></li>
-        </ul>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}> Link1 </Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}> Link2 </Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link3</Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link4</Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link5</Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link6</Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link7</Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link8</Link></div>
       </div>
     </>
   );
@@ -88,6 +86,29 @@ export default function Home() {
             <p>Por favor no hagan cazuela en pleno verano</p>
             </Link>
           </div>
+
+          <div className={styles.card}>
+            <Link href="/cazuela" style={{ textDecoration: 'none' }}>
+            <h3>Sopaipillas</h3>
+            <p>Ricas sopaipillas con ketchup</p>
+            </Link>
+          </div>
+
+          <div className={styles.card}>
+            <Link href="/cazuela" style={{ textDecoration: 'none' }}>
+            <h3>Calzones rotos</h3>
+            <p>AKA Broken underwear</p>
+            </Link>
+          </div>
+
+          <div className={styles.card}>
+            <Link href="/cazuela" style={{ textDecoration: 'none' }}>
+            <h3>Mote con huesillo</h3>
+            <p>OMG Chilean bobba</p>
+            </Link>
+          </div>
+
+          
           
         </div>
       </main>
