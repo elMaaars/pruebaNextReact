@@ -29,7 +29,6 @@ function MobileMenu() {
     <>
       <div>
         <h3>Vista móvil pendiente</h3>
-        <h4>HOLA</h4>
       </div>
     </>
   );
@@ -71,30 +70,27 @@ function Title() {
         <h1> Recetario </h1>
         <h2> Intento de responsive design </h2>
       </div>
-      <div className={styles.grid}>
+    </>
+  );
+}
+
+export default function Home() {
+  return (
+    <>
+      <main className={styles.main}>
+        <Menu />
+        <Title />
+
         <div className={styles.grid}>
-                <div className={styles.card}>
-                  <Link href="/cazuela" style={{ textDecoration: 'none' }}>
-                  <h3>Cazuela</h3>
-                  <p>Por favor no hagan cazuela en pleno verano</p>
-                  </Link>
-                </div>
-        <div className={styles.card}>
-          <h3>Sopaipilla</h3>
-          <p>Ricas sopaipillas con ketchup</p>
+          <div className={styles.card}>
+            <Link href="/cazuela" style={{ textDecoration: 'none' }}>
+            <h3>Cazuela</h3>
+            <p>Por favor no hagan cazuela en pleno verano</p>
+            </Link>
+          </div>
+          
         </div>
-        <div className={styles.card}>
-          <h3>Calzones rotos</h3>
-        </div>
-        <div className={styles.card}>
-          <h3>Mote con huesillo</h3>
-        </div>
-
-      </div>
-
-    </div>
-
-
+      </main>
     </>
   );
 }
