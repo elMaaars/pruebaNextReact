@@ -9,26 +9,20 @@
     
 }
 .main {
-    align-items: center;
     display: grid;
 }
-.navdesktop{
+
+.navigationbar{
     background-color: #76ABAE;
     display: flex;
 }
-.navdesktop ul{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.navigationbar div {
+    margin-left: auto;
+    margin-right: auto;
+    border:2px solid black;
+    padding: 3px 5.7em;
 }
-.navdesktop li a{
-    display: block;
-    text-align: center;
-    padding: 3px 15px;
-    text-transform: uppercase;
-}
-.navdesktop li a:hover{
+.navigationbar div:hover{
     background-color: #31363F;
     color:#EEEEEE;
 }

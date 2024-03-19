@@ -4,21 +4,20 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import Link from "next/link";
 
 function DesktopMenu() {
   return (
     <>
-      <div className={styles.navdesktop}>
-        <ul>
-          <li><a href="">Link1</a></li>
-          <li><a href="">Link2</a></li>
-          <li><a href="">Link3</a></li>
-          <li><a href="">Link4</a></li>
-          <li><a href="">Link5</a></li>
-          <li><a href="">Link6</a></li>
-          <li><a href="">Link7</a></li>
-          <li><a href="">Link8</a></li>
-        </ul>
+      <div className={styles.navigationbar}>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}> Link1 </Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}> Link2 </Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link3</Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link4</Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link5</Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link6</Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link7</Link></div>
+          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link8</Link></div>
       </div>
     </>
   );
@@ -82,43 +81,36 @@ export default function Home() {
         <Title />
 
         <div className={styles.grid}>
-          <a
-            href="/cazuela"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div className={styles.card}>
+            <Link href="/recetas/cazuela" style={{ textDecoration: 'none' }}>
             <h3>Cazuela</h3>
             <p>Por favor no hagan cazuela en pleno verano</p>
-          </a>
+            </Link>
+          </div>
 
-          <a
-            href="/sopaipilla"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3>Sopaipilla</h3>
+          <div className={styles.card}>
+            <Link href="/recetas/sopaipillas" style={{ textDecoration: 'none' }}>
+            <h3>Sopaipillas</h3>
             <p>Ricas sopaipillas con ketchup</p>
-          </a>
+            </Link>
+          </div>
 
-          <a
-            href="/calzones-rotos"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div className={styles.card}>
+            <Link href="/recetas/calzonesRotos" style={{ textDecoration: 'none' }}>
             <h3>Calzones rotos</h3>
-          </a>
+            <p>AKA Broken underwear</p>
+            </Link>
+          </div>
 
-          <a
-            href="/mote-con-huesillo"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div className={styles.card}>
+            <Link href="/recetas/moteConHuesillo" style={{ textDecoration: 'none' }}>
             <h3>Mote con huesillo</h3>
-          </a>
+            <p>OMG Chilean bobba</p>
+            </Link>
+          </div>
+
+          
+          
         </div>
       </main>
     </>
