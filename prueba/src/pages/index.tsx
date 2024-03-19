@@ -10,14 +10,14 @@ function DesktopMenu() {
   return (
     <>
       <div className={styles.navigationbar}>
-          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}> Link1 </Link></div>
-          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}> Link2 </Link></div>
-          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link3</Link></div>
-          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link4</Link></div>
-          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link5</Link></div>
-          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link6</Link></div>
-          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link7</Link></div>
-          <div><Link href="/cazuela" style={{ textDecoration: 'none' }}>Link8</Link></div>
+          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
+          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
+          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
+          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
+          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
+          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
+          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
+          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
       </div>
     </>
   );

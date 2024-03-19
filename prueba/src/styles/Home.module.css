@@ -14,13 +14,16 @@
 
 .navigationbar{
     background-color: #76ABAE;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
 }
-.navigationbar div {
+.navigationbar Link {
     margin-left: auto;
-    margin-right: auto;
-    border:2px solid black;
-    padding: 3px 5.7em;
+    margin-right: auto;    
+}
+
+.navigationbar div {
+    text-align: center;
 }
 .navigationbar div:hover{
     background-color: #31363F;
