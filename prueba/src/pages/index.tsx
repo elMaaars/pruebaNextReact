@@ -81,28 +81,28 @@ export default function Home() {
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <Link href="/cazuela" style={{ textDecoration: 'none' }}>
+            <Link href="/recetas/cazuela" style={{ textDecoration: 'none' }}>
             <h3>Cazuela</h3>
             <p>Por favor no hagan cazuela en pleno verano</p>
             </Link>
           </div>
 
           <div className={styles.card}>
-            <Link href="/cazuela" style={{ textDecoration: 'none' }}>
+            <Link href="/recetas/sopaipillas" style={{ textDecoration: 'none' }}>
             <h3>Sopaipillas</h3>
             <p>Ricas sopaipillas con ketchup</p>
             </Link>
           </div>
 
           <div className={styles.card}>
-            <Link href="/cazuela" style={{ textDecoration: 'none' }}>
+            <Link href="/recetas/calzonesRotos" style={{ textDecoration: 'none' }}>
             <h3>Calzones rotos</h3>
             <p>AKA Broken underwear</p>
             </Link>
           </div>
 
           <div className={styles.card}>
-            <Link href="/cazuela" style={{ textDecoration: 'none' }}>
+            <Link href="/recetas/moteConHuesillo" style={{ textDecoration: 'none' }}>
             <h3>Mote con huesillo</h3>
             <p>OMG Chilean bobba</p>
             </Link>
