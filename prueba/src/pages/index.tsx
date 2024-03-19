@@ -1,14 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 
 function DesktopMenu() {
   return (
     <>
-      <div className={styles.navigationbar}>
+      <div className={styles.navdesktop}>
         <ul>
           <li><a href="">Link1</a></li>
           <li><a href="">Link2</a></li>
@@ -27,9 +27,8 @@ function DesktopMenu() {
 function MobileMenu() {
   return (
     <>
-      <div>
-        <h3>Vista móvil pendiente</h3>
-        <h4>HOLA</h4>
+      <div className={styles.navmobile}>
+        <MenuIcon />
       </div>
     </>
   );
@@ -71,30 +70,57 @@ function Title() {
         <h1> Recetario </h1>
         <h2> Intento de responsive design </h2>
       </div>
-      <div className={styles.grid}>
+    </>
+  );
+}
+
+export default function Home() {
+  return (
+    <>
+      <main className={styles.main}>
+        <Menu />
+        <Title />
+
         <div className={styles.grid}>
-                <div className={styles.card}>
-                  <Link href="/cazuela" style={{ textDecoration: 'none' }}>
-                  <h3>Cazuela</h3>
-                  <p>Por favor no hagan cazuela en pleno verano</p>
-                  </Link>
-                </div>
-        <div className={styles.card}>
-          <h3>Sopaipilla</h3>
-          <p>Ricas sopaipillas con ketchup</p>
+          <a
+            href="/cazuela"
+            className={styles.card}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>Cazuela</h3>
+            <p>Por favor no hagan cazuela en pleno verano</p>
+          </a>
+
+          <a
+            href="/sopaipilla"
+            className={styles.card}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>Sopaipilla</h3>
+            <p>Ricas sopaipillas con ketchup</p>
+          </a>
+
+          <a
+            href="/calzones-rotos"
+            className={styles.card}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>Calzones rotos</h3>
+          </a>
+
+          <a
+            href="/mote-con-huesillo"
+            className={styles.card}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h3>Mote con huesillo</h3>
+          </a>
         </div>
-        <div className={styles.card}>
-          <h3>Calzones rotos</h3>
-        </div>
-        <div className={styles.card}>
-          <h3>Mote con huesillo</h3>
-        </div>
-
-      </div>
-
-    </div>
-
-
+      </main>
     </>
   );
 }

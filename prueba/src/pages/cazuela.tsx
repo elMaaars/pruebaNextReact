@@ -1,7 +1,6 @@
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
-import Box from '@mui/material/Box';
-
+import Box from "@mui/material/Box";
 
 export default function Cazuela() {
   return (
@@ -10,7 +9,7 @@ export default function Cazuela() {
         <h1> Cazuela </h1>
         <h2> Por favor no hagan cazuela en pleno verano </h2>
       </div>
-    
+
       <div className={styles.recipeeCard}>
       <div>
         <h1>
