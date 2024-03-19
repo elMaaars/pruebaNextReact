@@ -1,35 +1,63 @@
+import * as React from 'react';
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+
+function MenuLinks() {
+  return (
+    <>
+      <Link href="/cazuela" style={{ textDecoration: "none" }}><div>Link1</div></Link>
+      <Link href="/cazuela" style={{ textDecoration: "none" }}><div>Link1</div></Link>
+      <Link href="/cazuela" style={{ textDecoration: "none" }}><div>Link1</div></Link>
+      <Link href="/cazuela" style={{ textDecoration: "none" }}><div>Link1</div></Link>
+      <Link href="/cazuela" style={{ textDecoration: "none" }}><div>Link1</div></Link>
+      <Link href="/cazuela" style={{ textDecoration: "none" }}><div>Link1</div></Link>
+      <Link href="/cazuela" style={{ textDecoration: "none" }}><div>Link1</div></Link>
+      <Link href="/cazuela" style={{ textDecoration: "none" }}><div>Link1</div></Link>
+    </>
+  );
+}
 
 function DesktopMenu() {
   return (
     <>
-      <div className={styles.navigationbar}>
-          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
-          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
-          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
-          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
-          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
-          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
-          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
-          <Link href="/cazuela" style={{ textDecoration: 'none' }}><div>Link1</div></Link>
+      <div className={styles.navigationbarD}>
+        <MenuLinks />
       </div>
     </>
   );
 }
 
+function TemporaryDrawer() {
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen: boolean) => () => {
+    setOpen(newOpen);
+  };
+
+  return (
+    <div className={styles.temporaryDrawer}>
+      <Button onClick={toggleDrawer(true)}>
+        <MenuIcon />
+        <p>Menú</p>
+      </Button>
+      <Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
+        <div className={styles.navigationbarM}>
+          <MenuLinks />
+        </div>
+      </Drawer>
+    </div>
+  );
+}
+
 function MobileMenu() {
   return (
-    <>
-      <div className={styles.navmobile}>
-        <MenuIcon />
-      </div>
-    </>
+    <TemporaryDrawer />
   );
 }
 
@@ -82,35 +110,32 @@ export default function Home() {
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <Link href="/recetas/cazuela" style={{ textDecoration: 'none' }}>
-            <h3>Cazuela</h3>
-            <p>Por favor no hagan cazuela en pleno verano</p>
+            <Link href="/recetas/cazuela" style={{ textDecoration: "none" }}>
+              <h3>Cazuela</h3>
+              <p>Por favor no hagan cazuela en pleno verano</p>
             </Link>
           </div>
 
           <div className={styles.card}>
-            <Link href="/recetas/sopaipillas" style={{ textDecoration: 'none' }}>
-            <h3>Sopaipillas</h3>
-            <p>Ricas sopaipillas con ketchup</p>
+            <Link href="/recetas/sopaipillas" style={{ textDecoration: "none" }}>
+              <h3>Sopaipillas</h3>
+              <p>Ricas sopaipillas con ketchup</p>
             </Link>
           </div>
 
           <div className={styles.card}>
-            <Link href="/recetas/calzonesRotos" style={{ textDecoration: 'none' }}>
-            <h3>Calzones rotos</h3>
-            <p>AKA Broken underwear</p>
+            <Link href="/recetas/calzonesRotos" style={{ textDecoration: "none" }}>
+              <h3>Calzones rotos</h3>
+              <p>AKA Broken underwear</p>
             </Link>
           </div>
 
           <div className={styles.card}>
-            <Link href="/recetas/moteConHuesillo" style={{ textDecoration: 'none' }}>
-            <h3>Mote con huesillo</h3>
-            <p>OMG Chilean bobba</p>
+            <Link href="/recetas/moteConHuesillo" style={{ textDecoration: "none" }}>
+              <h3>Mote con huesillo</h3>
+              <p>OMG Chilean bobba</p>
             </Link>
           </div>
-
-          
-          
         </div>
       </main>
     </>

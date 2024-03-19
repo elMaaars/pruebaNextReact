@@ -11,18 +11,18 @@ export default function Cazuela() {
       </div>
 
       <div className={styles.recipeeCard}>
-      <div>
-        <h1>
-          Ingredientes:
-        </h1>
-        <ul>
-          <li>Agua</li>
-          <li>Papa</li>
-          <li>Choclo</li>
-          <li>Zapallo</li>
-          <li>Carne</li>
-        </ul>
-      </div>
+        <div>
+          <h1>
+            Ingredientes:
+          </h1>
+          <ul>
+            <li>Agua</li>
+            <li>Papa</li>
+            <li>Choclo</li>
+            <li>Zapallo</li>
+            <li>Carne</li>
+          </ul>
+        </div>
         <Image
           src="/cazuela.jpeg"
           width={600}

@@ -6,35 +6,63 @@
     margin-left: auto;
     margin-right: auto;
     width: 8em;
-    
 }
 .main {
     display: grid;
 }
 
-.navigationbar{
+.navigationbarD{
     background-color: #76ABAE;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
 }
-.navigationbar Link {
+.navigationbarD Link {
+    display: block;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
+    border: 2px solid black;
 }
-
-.navigationbar div {
+.navigationbarD div {
     text-align: center;
 }
-.navigationbar div:hover{
+.navigationbarD div:hover{
     background-color: #31363F;
     color:#EEEEEE;
 }
-.navmobile {
+
+.navigationbarM {
     background-color: #76ABAE;
+    display: block;
 }
-.navmobile MenuIcon {
-    color: red;
+.navigationbarM Link {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
 }
+.navigationbarM div {
+    text-align: center;
+}
+.navigationbarM div:hover{
+    background-color: #31363F;
+    color:#EEEEEE;
+}
+
+.temporaryDrawer {
+    display: flex;
+    justify-content: center;
+    color:#EEEEEE;
+    background-color: #222831;
+}
+.temporaryDrawer Button {
+    color: inherit;
+}
+.temporaryDrawer Drawer {
+    color: inherit;
+    background-color: inherit;
+}
+
 .title {
     background-color: #31363F;
     color: #EEEEEE;
