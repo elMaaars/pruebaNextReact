@@ -5,8 +5,10 @@ import styles from "@/styles/Home.module.css";
 import { useState, useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import { Card, CardContent, CardMedia, CardActionArea } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
 function MenuLinks() {
   return (
@@ -42,8 +44,7 @@ function TemporaryDrawer() {
 
   return (
     <div className={styles.temporaryDrawer}>
-      <Button onClick={toggleDrawer(true)}>
-        <MenuIcon />
+      <Button onClick={toggleDrawer(true)} startIcon={<MenuIcon />}>
         <p>Menú</p>
       </Button>
       <Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
@@ -84,7 +85,7 @@ const useDeviceSize = () => {
 
 function Menu() {
   const [w, h] = useDeviceSize();
-  if (w <= 700) {
+  if (w <= 600) {
     return (<MobileMenu />);
   }
   return (<DesktopMenu />);
@@ -108,11 +109,105 @@ export default function Home() {
         <Menu />
         <Title />
 
-        <div className={styles.grid}>
+        {/* <div className={styles.grid}> */}
+        <Box>
+          <Grid container spacing={{ xs: 1, sm: 2 }}>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <Link href="/recetas/cazuela">
+                  <CardActionArea>
+                    <CardMedia>
+                      <Image
+                        src="/cazuela.jpeg"
+                        width="400"
+                        height="300"
+                        alt="Cazuela"
+                      />
+                    </CardMedia>
+                    <CardContent>
+                      <h3>Cazuela</h3>
+                      <p>Por favor no hagan cazuela en pleno verano</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Link>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <Link href="/recetas/sopaipillas">
+                  <CardActionArea>
+                    <CardMedia>
+                      <Image
+                        src="/sopaipillas.jpeg"
+                        width="400"
+                        height="300"
+                        alt="Sopaipilla"
+                      />
+                    </CardMedia>
+                    <CardContent>
+                      <h3>Sopaipillas</h3>
+                      <p>Ricas sopaipillas con ketchup</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Link>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <Link href="/recetas/calzonesRotos">
+                  <CardActionArea>
+                    <CardMedia>
+                      <Image
+                        src="/calzonesRotos.jpeg"
+                        width="400"
+                        height="300"
+                        alt="Calzones Rotos"
+                      />
+                    </CardMedia>
+                    <CardContent>
+                      <h3>Calzones rotos</h3>
+                      <p>AKA Broken underwear</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Link>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <Link href="/recetas/moteConHuesillo">
+                  <CardActionArea>
+                    <CardMedia>
+                      <Image
+                        src="/moteConHuesillo.jpeg"
+                        width="400"
+                        height="300"
+                        alt="Mote con huesillo"
+                      />
+                    </CardMedia>
+                    <CardContent>
+                      <h3>Mote con huesillo</h3>
+                      <p>OMG Chilean bobba</p>
+                    </CardContent>
+                  </CardActionArea>
+                </Link>
+              </Card>
+            </Grid>
+
+          </Grid>
+        </Box>
+
+
+          {/*
           <div className={styles.card}>
             <Link href="/recetas/cazuela" style={{ textDecoration: "none" }}>
               <h3>Cazuela</h3>
               <p>Por favor no hagan cazuela en pleno verano</p>
+              <Image
+                src="/cazuela.jpeg"
+                width={200}
+                height={200}
+                alt="Cazuela"
+              />
             </Link>
           </div>
 
@@ -137,6 +232,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        */}
       </main>
     </>
   );
