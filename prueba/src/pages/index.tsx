@@ -116,11 +116,10 @@ export default function Home() {
               <Card>
                 <Link href="/recetas/cazuela">
                   <CardActionArea>
-                    <CardMedia>
+                    <CardMedia sx={{ position: "relative", width: "auto", height: "300px" }}>
                       <Image
                         src="/cazuela.jpeg"
-                        width="400"
-                        height="300"
+                        fill
                         alt="Cazuela"
                       />
                     </CardMedia>
@@ -136,11 +135,10 @@ export default function Home() {
               <Card>
                 <Link href="/recetas/sopaipillas">
                   <CardActionArea>
-                    <CardMedia>
+                    <CardMedia sx={{ position: "relative", width: "auto", height: "300px" }}>
                       <Image
                         src="/sopaipillas.jpeg"
-                        width="400"
-                        height="300"
+                        fill
                         alt="Sopaipilla"
                       />
                     </CardMedia>
@@ -156,11 +154,10 @@ export default function Home() {
               <Card>
                 <Link href="/recetas/calzonesRotos">
                   <CardActionArea>
-                    <CardMedia>
+                    <CardMedia sx={{ position: "relative", width: "auto", height: "300px" }}>
                       <Image
                         src="/calzonesRotos.jpeg"
-                        width="400"
-                        height="300"
+                        fill
                         alt="Calzones Rotos"
                       />
                     </CardMedia>
@@ -176,11 +173,10 @@ export default function Home() {
               <Card>
                 <Link href="/recetas/moteConHuesillo">
                   <CardActionArea>
-                    <CardMedia>
+                    <CardMedia sx={{ position: "relative", width: "auto", height: "300px" }}>
                       <Image
                         src="/moteConHuesillo.jpeg"
-                        width="400"
-                        height="300"
+                        fill
                         alt="Mote con huesillo"
                       />
                     </CardMedia>
@@ -192,47 +188,8 @@ export default function Home() {
                 </Link>
               </Card>
             </Grid>
-
           </Grid>
         </Box>
-
-
-          {/*
-          <div className={styles.card}>
-            <Link href="/recetas/cazuela" style={{ textDecoration: "none" }}>
-              <h3>Cazuela</h3>
-              <p>Por favor no hagan cazuela en pleno verano</p>
-              <Image
-                src="/cazuela.jpeg"
-                width={200}
-                height={200}
-                alt="Cazuela"
-              />
-            </Link>
-          </div>
-
-          <div className={styles.card}>
-            <Link href="/recetas/sopaipillas" style={{ textDecoration: "none" }}>
-              <h3>Sopaipillas</h3>
-              <p>Ricas sopaipillas con ketchup</p>
-            </Link>
-          </div>
-
-          <div className={styles.card}>
-            <Link href="/recetas/calzonesRotos" style={{ textDecoration: "none" }}>
-              <h3>Calzones rotos</h3>
-              <p>AKA Broken underwear</p>
-            </Link>
-          </div>
-
-          <div className={styles.card}>
-            <Link href="/recetas/moteConHuesillo" style={{ textDecoration: "none" }}>
-              <h3>Mote con huesillo</h3>
-              <p>OMG Chilean bobba</p>
-            </Link>
-          </div>
-        </div>
-        */}
       </main>
     </>
   );
