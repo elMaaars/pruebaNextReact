@@ -102,92 +102,75 @@ function Title() {
   );
 }
 
+function CardGrid(props) {
+  const urlname = props.urlname;
+  const imagename = props.imagename;
+  const alt = props.alt;
+  const header = props.header;
+  const desc = props.desc;
+
+  return (
+    <>
+      <Grid item xs={12} sm={6} md={3}>
+        <Card>
+          <Link href={"/recetas/" + urlname}>
+            <CardActionArea>
+              <CardMedia sx={{ position: "relative", width: "auto", height: "300px" }}>
+                <Image
+                  src={"/" + imagename + ".jpeg"}
+                  fill
+                  objectFit="cover"
+                  alt={alt}
+                />
+              </CardMedia>
+              <CardContent>
+                <h3>{header}</h3>
+                <p>{desc}</p>
+              </CardContent>
+            </CardActionArea>
+          </Link>
+        </Card>
+      </Grid>
+    </>
+  );
+}
+
 export default function Home() {
   return (
     <>
       <main className={styles.main}>
         <Menu />
         <Title />
-
-        {/* <div className={styles.grid}> */}
         <Box>
           <Grid container spacing={{ xs: 1, sm: 2 }}>
-            <Grid item xs={12} sm={6} md={3}>
-              <Card>
-                <Link href="/recetas/cazuela">
-                  <CardActionArea>
-                    <CardMedia sx={{ position: "relative", width: "auto", height: "300px" }}>
-                      <Image
-                        src="/cazuela.jpeg"
-                        fill
-                        alt="Cazuela"
-                      />
-                    </CardMedia>
-                    <CardContent>
-                      <h3>Cazuela</h3>
-                      <p>Por favor no hagan cazuela en pleno verano</p>
-                    </CardContent>
-                  </CardActionArea>
-                </Link>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Card>
-                <Link href="/recetas/sopaipillas">
-                  <CardActionArea>
-                    <CardMedia sx={{ position: "relative", width: "auto", height: "300px" }}>
-                      <Image
-                        src="/sopaipillas.jpeg"
-                        fill
-                        alt="Sopaipilla"
-                      />
-                    </CardMedia>
-                    <CardContent>
-                      <h3>Sopaipillas</h3>
-                      <p>Ricas sopaipillas con ketchup</p>
-                    </CardContent>
-                  </CardActionArea>
-                </Link>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Card>
-                <Link href="/recetas/calzonesRotos">
-                  <CardActionArea>
-                    <CardMedia sx={{ position: "relative", width: "auto", height: "300px" }}>
-                      <Image
-                        src="/calzonesRotos.jpeg"
-                        fill
-                        alt="Calzones Rotos"
-                      />
-                    </CardMedia>
-                    <CardContent>
-                      <h3>Calzones rotos</h3>
-                      <p>AKA Broken underwear</p>
-                    </CardContent>
-                  </CardActionArea>
-                </Link>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={3}>
-              <Card>
-                <Link href="/recetas/moteConHuesillo">
-                  <CardActionArea>
-                    <CardMedia sx={{ position: "relative", width: "auto", height: "300px" }}>
-                      <Image
-                        src="/moteConHuesillo.jpeg"
-                        fill
-                        alt="Mote con huesillo"
-                      />
-                    </CardMedia>
-                    <CardContent>
-                      <h3>Mote con huesillo</h3>
-                      <p>OMG Chilean bobba</p>
-                    </CardContent>
-                  </CardActionArea>
-                </Link>
-              </Card>
-            </Grid>
+            <CardGrid
+              urlname="cazuela"
+              imagename="cazuela"
+              alt="Cazuela"
+              header="Cazuela"
+              desc="Por favor no hagan cazuela en pleno verano"
+            />
+            <CardGrid
+              urlname="sopaipillas"
+              imagename="sopaipillas"
+              alt="Sopaipillas"
+              header="Sopaipillas"
+              desc="Ricas sopaipillas con ketchup"
+            />
+            <CardGrid
+              urlname="calzonesRotos"
+              imagename="calzonesRotos"
+              alt="Calzones rotos"
+              header="Calzones rotos"
+              desc="AKA Broken underwear"
+            />
+            <CardGrid
+              urlname="moteConHuesillo"
+              imagename="moteConHuesillo"
+              alt="Mote con huesillo"
+              header="Mote con huesillo"
+              desc="OMG Chilean bobba"
+            />
           </Grid>
         </Box>
       </main>
