@@ -102,7 +102,7 @@ function Title() {
   );
 }
 
-function CardGrid(props) {
+function CardGrid(props: { urlname: string; imagename: string; alt: string; header: string; desc: string }) {
   const urlname = props.urlname;
   const imagename = props.imagename;
   const alt = props.alt;
@@ -170,6 +170,34 @@ export default function Home() {
               alt="Mote con huesillo"
               header="Mote con huesillo"
               desc="OMG Chilean bobba"
+            />
+            <CardGrid
+              urlname="porotosConRiendas"
+              imagename="porotosConRiendas"
+              alt="Porotos con riendas"
+              header="Porotos con riendas"
+              desc="Uyuuuuuuuui"
+            />
+            <CardGrid
+              urlname="terremoto"
+              imagename="terremoto"
+              alt="Terremoto"
+              header="Terremoto"
+              desc="Afírmese, sobrino"
+            />
+            <CardGrid
+              urlname="asado"
+              imagename="asado"
+              alt="Asado"
+              header="Asado"
+              desc="¿Un asadito? Un asaditooooo"
+            />
+            <CardGrid
+              urlname="humita"
+              imagename="humita"
+              alt="Humita"
+              header="Humita"
+              desc="Team tomate o muerte"
             />
           </Grid>
         </Box>
